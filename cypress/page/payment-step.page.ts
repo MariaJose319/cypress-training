@@ -9,7 +9,7 @@ class PaymentStepPage {
       this.confirmMessage = "#center_column > div > p > strong";
     }
   
-    public payByBank(): void {
+    public payByBankWire(): void {
         cy.get(this.payButton).click();
     }
 

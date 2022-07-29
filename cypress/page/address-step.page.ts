@@ -1,13 +1,13 @@
-class AdressStepPage {
+class AddressStepPage {
     private checkoutButton: string;
 
     constructor() {
       this.checkoutButton = "[name = 'processAddress']";
     }
   
-    public proceedToCheckoutIII(): void {
+    public proceedToCheckout(): void {
         cy.get(this.checkoutButton).click();
     }
   }
   
-  export {AdressStepPage};
+  export {AddressStepPage};

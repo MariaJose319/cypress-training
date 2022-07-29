@@ -1,11 +1,11 @@
 import {MenuContentPage, ProductListPage, ShoppingCartPage, LoginPage,
-  AdressStepPage, ShippingStepPage, PaymentStepPage} from "../page/index";
+  AddressStepPage, ShippingStepPage, PaymentStepPage} from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const productListPage = new ProductListPage();
 const shoppingCartPage = new ShoppingCartPage();
 const loginPage = new LoginPage();
-const adressStepPage = new AdressStepPage();
+const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
 const paymentStepPage = new PaymentStepPage();
 
@@ -17,16 +17,16 @@ describe("Buy a t-shirt", () => {
     productListPage.addToCart();
     productListPage.proceedToCheckout();
 
-    shoppingCartPage.proceedToCheckoutII();
+    shoppingCartPage.proceedToCheckout();
 
-    loginPage.login();
+    loginPage.login("aperdomobo@gmail.com", "WorkshopProtractor");
 
-    adressStepPage.proceedToCheckoutIII();
+    addressStepPage.proceedToCheckout();
 
     shippingStepPage.acceptTerms();
-    shippingStepPage.proceedToCheckoutIV();
+    shippingStepPage.proceedToCheckout();
 
-    paymentStepPage.payByBank();
+    paymentStepPage.payByBankWire();
     paymentStepPage.confirmOrder();
     paymentStepPage.getConfirmMessage().should(
         "have.text",

@@ -1,6 +1,4 @@
 class LoginPage {
-    private email: string;
-    private password: string;
     private emailInput: string;
     private passwordInput: string;
     private loginButton: string;
@@ -8,14 +6,12 @@ class LoginPage {
     constructor() {
       this.emailInput = "#email";
       this.passwordInput = "#passwd";
-      this.email = "aperdomobo@gmail.com";
-      this.password = "WorkshopProtractor";
       this.loginButton = "#SubmitLogin";
     }
   
-    public login(): void {
-        cy.get(this.emailInput).type(this.email);
-        cy.get(this.passwordInput).type(this.password);
+    public login(email: string , password: string): void {
+        cy.get(this.emailInput).type(email);
+        cy.get(this.passwordInput).type(password);
         cy.get(this.loginButton).click();
     }
   }
