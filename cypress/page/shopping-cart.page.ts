@@ -2,7 +2,7 @@ class ShoppingCartPage {
   private checkoutButton: string;
 
   constructor() {
-    this.checkoutButton = ".cart_navigation >[title='Proceed to checkout']";
+    this.checkoutButton = ".cart_navigation a[title='Proceed to checkout']";
   }
 
   public proceedToCheckout(): void {
