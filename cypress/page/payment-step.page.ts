@@ -6,7 +6,7 @@ class PaymentStepPage {
     constructor() {
       this.payButton = "[title='Pay by bank wire']";
       this.confirmButton = "#cart_navigation > [type='submit']";
-      this.confirmMessage = "#center_column > div > p > strong";
+      this.confirmMessage = ".cheque-indent > .dark";
     }
   
     public payByBankWire(): void {
